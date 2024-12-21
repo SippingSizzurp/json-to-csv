@@ -1,6 +1,7 @@
-﻿import pandas as pd
+import pandas as pd
 import os
 import sys
+
 
 current_folder = os.getcwd()
 def is_valid_json_file(filename: str) -> bool:
@@ -12,6 +13,7 @@ def is_valid_json_file(filename: str) -> bool:
 json_files = [f for f in os.listdir(current_folder) if is_valid_json_file(f)]
 if not json_files:
     print("No valid JSON files found in the current directory.")
+    input("Press enter to continue. . .")
     sys.exit(0)
 for file_name in json_files:
         try:
@@ -39,5 +41,7 @@ for file_name in json_files:
             print("Please report this issue with the stack trace below:")
             import traceback
             print(traceback.format_exc())
+            input("Press enter to continue. . .")
 
 print("All JSON files have been processed!")
+input("Press enter to continue. . .")
