@@ -43,5 +43,4 @@ for file_name in json_files:
             print(traceback.format_exc())
             input("Press enter to continue. . .")
 
-print("All JSON files have been processed!")
-input("Press enter to continue. . .")
+input(f"Processing complete! Successfully processed {successful_count} out of {len(json_files)} files.\nPress enter to continue. . .")
